@@ -1,7 +1,8 @@
 //app/page.tsx
 import { UserButton } from "@clerk/nextjs";
 
-export default function Home() {
+export default async function Home() {
+  const result = await fetchPosts();
   return (
     <>
       {/* <UserButton afterSignOutUrl="/" /> */}
